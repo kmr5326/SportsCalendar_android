@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="SportsCalendar.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_main"
+            android:layout_width="30sp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/list_container"
+        android:name="com.example.sportscheduler.MatchListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+
+<!--리니어 레이아웃에 데이터를 가져와서 그대로 띄워주기 먼저 구현,-->
+<!--파일에는 25일 야구: 기아vs롯데, 25일 축구: 전북vs전남 이 두개가 저장될 것,.-->
+<!--저 값들을 리스트 형태로 리니어레이아웃에 보여줄거,.-->
+<!--ㅇ데이터 파일 만들었는데 resource파일로 근데 못찾겠음. 어케찾지?-->
